@@ -1,43 +1,42 @@
 import { Text, Image, View } from "react-native";
-import styles from "../styles/HomeStyles"
-import Test from "../components/test"
-import { SwipeGesture } from "react-native-swipe-gesture-handler";
 import React, { useState } from 'react';
+import { PanGestureHandler, State } from 'react-native-gesture-handler';
+import Animated, { event } from 'react-native-reanimated';
+
+import styles from "../styles/HomeStyles";
+import Test from "../components/test";
 
 export default function Index() {
     const [text, setText] = useState('TOCAR PARA INICIAR');
-    const onSwipePerformed = (action) => {
 
-          switch(action){
-            case 'left':{
-              setText('left Swipe performed');
-              break;
+    const onSwipePerformed = event([
+        {
+            nativeEvent: ({ translationX, translationY }) => {
+                // Detect swipe direction
+                if (Math.abs(translationX) > Math.abs(translationY)) {
+                    if (translationX > 0) {
+                        setText('right Swipe performed');
+                    } else {
+                        setText('left Swipe performed');
+                    }
+                } else {
+                    if (translationY > 0) {
+                        setText('down Swipe performed');
+                    } else {
+                        setText('up Swipe performed');
+                    }
+                }
             }
-             case 'right':{
-              setText('right Swipe performed');
-              break;
-            }
-             case 'up':{
-              setText('up Swipe performed');
-              break;
-            }
-             case 'down':{
-              setText('down Swipe performed');
-              break;
-            }
-             default : {
-             setText('Undeteceted action');
-             }
-          }
-    }
+        }
+    ]);
 
-  return (
-      <>
-        <View style={styles.container}>
-            <Image source={require('../assets/images/BanorteLogo.png')} style={{ width: 300, height: 50 }}  />
-            <Text style={{ lineHeight: 30 }}></Text>
-            <Text style={styles.text}>{text}</Text>
-        </View>
-    </>
-  );
+    return (
+        <PanGestureHandler onGestureEvent={onSwipePerformed}>
+            <Animated.View style={styles.container}>
+                <Image source={require('../assets/images/BanorteLogo.png')} style={{ width: 300, height: 50 }} />
+                <Text style={{ lineHeight: 30 }}></Text>
+                <Text style={styles.text}>{text}</Text>
+            </Animated.View>
+        </PanGestureHandler>
+    );
 }
