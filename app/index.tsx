@@ -1,16 +1,16 @@
 import { Text, Image, View, TouchableHighlight } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 import styles from "../styles/HomeStyles"
-import Test from "../components/test"
-
 
 
 export default function Index() {
+  const nav = useNavigation();
   return (
     <>
       <View style={styles.container}>
         <TouchableHighlight
           underlayColor="#DDDDDD"
-          onPress={() => alert('Pressed!')}
+          onPress={() => nav.navigate('mainScreen')}
         >
           <View >
             <Image
