@@ -32,6 +32,84 @@ const cardsData = [
             "Cuentas con una cobertura hasta por USD 400 al año contra daño o robo de la mayoría de los productos y artículos nuevos comprados con la Tarjeta de Crédito Mujer Banorte."
         ],
     },
+    {
+        "id": 4,
+        "nombreTarjeta": "Tarjeta de Credito AT&T",
+        "descripcion": "La Tarjeta de Crédito AT&T te permite realizar compras en tus lugares favoritos.",
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanorteATT.png',
+        "ventajas": [
+            "Domicilia el pago de tu plan AT&T a tu tarjeta y recibe gigas adicionales de regalo cada mes.",
+            "Gigas adicionales para descargar tus canciones favoritas, interactuar con tus amigos a través de las redes sociales y mucho más.",
+            "Meses sin intereses en tiendas AT&T."
+        ],
+    },
+    {
+        "id": 5,
+        "nombreTarjeta": "Tarjeta de Credito BanorTec",
+        "descripcion": "Es la app donde podrás contratar los productos y servicios financieros que Banorte ha diseñado de forma exclusiva para los miembros de la comunidad de alumnos, docentes y personal administrativo del Tecnológico de Monterrey.",
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanorTec.png',
+        "ventajas": [
+            "No pagas comisiones, por apertura, administración – <renta, o membresí­a. Más de 31,000 opciones de acceso a tu dinero..",
+            "Miles de promociones exclusivas todo el año, preventas, bonificaciones y más.",
+            "Asistencia Dental con la que tienes 2 consultas, 2 limpiezas y 1 radiografí­a y descuentos en tratamientos dentales."
+        ],
+    },
+    {
+        "id": 6,
+        "nombreTarjeta": "Tarjeta de Credito Seleccion Nacional",
+        "descripcion": "Con la Tarjeta de Crédito Selección Nacional, podrás recibir recompensas por tus compras, vivir experiencias únicas en el mundo deportivo y demostrar tu pasión por México.",
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanorteSeleccion.png',
+        "ventajas": [
+            "Acumular compras por $20,000 pesos o más durante los primeros 3 meses después de activar tu tarjeta física o digital.",
+            "Premiamos el uso de tu tarjeta, acumula compras para ganar artículos oficiales de la Selección Nacional de México, experiencias deportivas exclusivas, monederos electrónicos de tiendas departamentales y más<.",
+            "Realizas compras con tu tarjeta los días que juega la Selección Nacional."
+        ],
+    },
+    {
+        "id": 7,
+        "nombreTarjeta": "Tarjeta de Credito Banorte Por Ti",
+        "descripcion": "La tarjeta que te devuelve efectivo por tus compras.",
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanortePorTi.png',
+        "ventajas": [
+            "Aprovecha el nuevo beneficio exclusivo de tu tarjeta y paga cómodamente a 12 meses con intereses en compras mayores a $4,000 pesos con una tasa de interés del 23% anual fija.",
+            "Cuentas con una cobertura hasta por USD 200 al año contra daño o robo de la mayoría de los productos y artículos nuevos comprados con tu Tarjeta Banorte POR Ti..",
+            "Cinépolis: 2x1 en boletos para salas tradicionales.",
+            "Starbucks Rewards: 30% de bonificación al comprar en la aplicación los días domingo"
+        ],
+    },
+    {
+        "id": 8,
+        "nombreTarjeta": "Tarjeta de Credito 40",
+        "descripcion": "para ti, que con musica todo es mejor.",
+        "PathImg": '../assets/images/banorteTarjetasCredito/Banorte40.png',
+        "ventajas": [
+            "Fiestas y conciertos de tus artistas favoritos.",
+            "Premieres de cine y mucho más.",
+            "Convivencias con locutores."
+        ],
+    },
+    {
+        "id": 9,
+        "nombreTarjeta": "Tarjeta de credito Marriott Bonvoy",
+        "descripcion": "La tarjeta que transforma tus compras en experiencia de viaje",
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanorteMarriott.png',
+        "ventajas": [
+            "Espera tu vuelo en salas diseñadas especialmente para ti. Relájate, refréscate y aprovecha al máximo tu estancia en la T1 del AICM.",
+            "Obtén descuentos de forma automática en diferentes comercios en todo el mundo.",
+            "Lleva tu coche a la T1 del AICM y déjalo con el servicio Elite Valet de Mastercard. Con tu Tarjeta de Crédito Marriott Bonvoy, paga solo el 50% del precio regular por una estancia de hasta 5 días."
+        ],
+    },
+    {
+        "id": 10,
+        "nombreTarjeta": "Tarjeta de credito W Radio",
+        "descripcion": "La tarjeta que te da acceso a eventos exclusivos y experiencias culturales.",
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanorteWRadio.png',
+        "ventajas": [
+            "Eventos exclusivos de la estación de radio<.",
+            "Premieres de cine y mucho más .",
+            "Aniversarios de los programas."
+        ],
+    },
 ]
 
 export default cardsData;
