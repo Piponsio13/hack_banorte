@@ -1,4 +1,4 @@
-export const cardsData = [
+const cardsData = [
     {
         "nombreTarjeta": "Tarjeta de Credito Clasica",
         "descripcion": "La Tarjeta de Crédito Clásica te permite diferir todas tus compras con una tasa preferencial.",
@@ -30,3 +30,5 @@ export const cardsData = [
         ],
     },
 ]
+
+export default cardsData;

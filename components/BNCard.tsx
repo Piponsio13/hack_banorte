@@ -1,36 +1,35 @@
+import React from 'react';
+import { Card, Button, Text } from 'react-native-paper';
+import { StyleSheet, View } from 'react-native';
+import {Image,TouchableHighlight } from "react-native";
 
-import { Avatar, Button, Card, Text, IconButton } from 'react-native-paper';
-import styles from "../styles/HomeStyles"
-
-export default function BNCard({ title, cardImage, description, benefits }){
-    return(
-      <Card style={styles.card}>
-        <Card.Cover source={cardImage} />
-        <Card.Title style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around',}} title={title} />
-        <Card.Content>
-          <Text>{description}</Text>
-        </Card.Content>
-        <Card.Actions>
-          <Button
-            icon="alpha-x-circle-outline"
-            contentStyle={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-            }}
-            labelStyle={{ fontSize: 96, color: "#FF0000", }}
-            style={{ backgroundColor: "#FFFFFF" , width: 150}}></Button>
-          <Button
-            icon="star-circle-outline"
-            contentStyle={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-              }}
-            labelStyle={{ fontSize: 96, color: "#FF0000", }}
-            style={{ backgroundColor: "#FFFFFF" , width: 150}}
-          >
-          <Button>Ok</Button>
-          </Button>
-        </Card.Actions>
-      </Card>
-    );
+interface BNCardProps {
+  title: string;
+  cardImage: any;
+  description: string;
+  benefits: string;
 }
+
+export default function BNCard({ title, cardImage, description, benefits }: BNCardProps) {
+  return (
+    <View style={{justifyContent:'center', height:'85%',width:'100%', backgroundColor: "#FFFFFF", borderRadius: 15}}>
+        <View style={{width: '90%'}}>
+        <Image source={require('../assets/images/banorteTarjetasCredito/Banorte40.png')} style={{ width: '110%'}}/>
+        </View>
+        <View style={{justifyContent:'center', alignItems: 'center'}}>
+            <Text style={{fontSize: 35, color: '#E11B1B'}}>Tarjeta Banorte 40</Text>
+            <Text style={{textAlign: 'center',margin: 20, fontSize: 20, color: '#E11B1B'}}>Para ti, que con musica todo es mejor</Text>
+        </View>
+        <View style={{justifyContent:'space-between', flexDirection: 'row', justifyContent:'center', alignItems: 'center', width: '100%'}}>
+            <Button
+                icon="alpha-x-circle-outline"
+                labelStyle={{ fontSize: 90, color: "#FF0000", }}
+                style={{ backgroundColor: "#FFFFFF",width:100}}>
+            </Button>
+            <Button icon="star-circle-outline" labelStyle={{ fontSize: 90, color: "#FF0000", }}style={{ backgroundColor: "#FFFFFF" , width: 100}}/>
+            <Button icon="check-circle-outline" labelStyle={{ fontSize: 90, color: "#FF0000", }}style={{ backgroundColor: "#FFFFFF" , width: 100}}/>
+        </View>
+    </View>
+  );
+}
+
