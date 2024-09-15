@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     text: {
-        color: 'white',
+        color: '#FFFFFF',
         fontSize: 32,
     },
     card: {
