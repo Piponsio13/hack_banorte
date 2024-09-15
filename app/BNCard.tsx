@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, Button, Text } from 'react-native-paper';
 import { StyleSheet, View } from 'react-native';
 import {Image,TouchableHighlight } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+import { StrictMode } from 'react';
 
 interface BNCardProps {
   title: string;
@@ -11,6 +13,8 @@ interface BNCardProps {
 }
 
 export default function BNCard({ title, cardImage, description, benefits }: BNCardProps) {
+
+  const nav = useNavigation();
   return (
     <View style={{justifyContent:'center', height:'85%',width:'100%', backgroundColor: "#FFFFFF", borderRadius: 15}}>
         <View style={{width: '90%'}}>
@@ -26,8 +30,16 @@ export default function BNCard({ title, cardImage, description, benefits }: BNCa
                 labelStyle={{ fontSize: 90, color: "#FF0000", }}
                 style={{ backgroundColor: "#FFFFFF",width:100}}>
             </Button>
-            <Button icon="star-circle-outline" labelStyle={{ fontSize: 90, color: "#FF0000", }}style={{ backgroundColor: "#FFFFFF" , width: 100}}/>
-            <Button icon="check-circle-outline" labelStyle={{ fontSize: 90, color: "#FF0000", }}style={{ backgroundColor: "#FFFFFF" , width: 100}}/>
+            <Button icon="star-circle-outline" labelStyle={{ fontSize: 90, color: "#FF0000", }}style={{ backgroundColor: "#FFFFFF" , width: 100}}>
+            </Button>
+
+            <Button
+                icon="check-circle-outline"
+                labelStyle={{ fontSize: 90, color: "#FF0000", }}
+                style={{ backgroundColor: "#FFFFFF" , width: 100}}
+                onPress={() => nav.navigate("MatchCards")}
+            ></Button>
+
         </View>
     </View>
   );

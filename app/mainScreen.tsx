@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, Image, View, TouchableHighlight } from "react-native";
 import { Avatar, Button, Card} from 'react-native-paper';
 import BNCard from "../components/BNCard"
+import BNSwap from "../components/BNSwap"
+import BNSwapRight from "../components/BNSwapRight"
+import BNTwoButtons from "../components/BNTwoButtons"
+import BNStarButton from "../components/BNStarButton"
 import styles from "../styles/HomeStyles"
 import cardsData from "../cardData/cardData"
 
@@ -16,12 +20,7 @@ export default function MainScreen() {
               style={{ width: 350, height: 50, alignItems: 'center', justifyContent: 'center' }}
             />
           </View>
-          <BNCard
-            title={'Titulo'}
-            cardImage={'../assets/images/BanorteLogo.png'}
-            description={''}
-            benefits={""}
-          />
+          <BNTwoButtons />
         </View>
       </View>
     </>

@@ -19,6 +19,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#FFFFFF"
 
     },
+    listCard: {
+        display: 'flex',
+        width: '95%',
+        margin: 20,
+        flexDirection: 'column'
+    }
 });
 
 export default styles;
