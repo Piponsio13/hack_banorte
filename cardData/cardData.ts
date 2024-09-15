@@ -1,8 +1,9 @@
-export const cardsData = [
+const cardsData = [
     {
+        "id": 1,
         "nombreTarjeta": "Tarjeta de Credito Clasica",
         "descripcion": "La Tarjeta de Crédito Clásica te permite diferir todas tus compras con una tasa preferencial.",
-        "PathImg": '../assets/images//banorteTarjetasCredito',
+        "PathImg": '../assets/images/banorteTarjetasCredito/BanorteClasica.png',
         "ventajas": [
             "6 meses sin intereses. En tus compras durante los primeros 30 días después de activar tu tarjeta física.",
             "Aprovecha y paga cómodamente con tu Tarjeta de Crédito Clásica cualquier compra mayor a $2,000 pesos.",
@@ -10,6 +11,7 @@ export const cardsData = [
         ],
     },
     {
+        "id": 2,
         "nombreTarjeta": "Tarjeta de Credito Oro",
         "descripcion": "La Tarjeta de Crédito Oro te ayuda a cumplir tus sueños y te brinda valiosos beneficios durante todo el año.",
         "PathImg": '../assets/images/banorteTarjetasCredito/BanorteOro.png',
@@ -20,6 +22,7 @@ export const cardsData = [
         ],
     },
     {
+        "id": 3,
         "nombreTarjeta": "Tarjeta de Credito Mujer Banorte",
         "descripcion": "La Tarjeta de Crédito Mujer Banorte te acompaña en los distintos ámbitos de tu vida e impulsa tus proyectos mediante beneficios diseñados especialmente para ti.",
         "PathImg": '../assets/images/banorteTarjetasCredito/BanorteMujer.png',
@@ -30,3 +33,5 @@ export const cardsData = [
         ],
     },
 ]
+
+export default cardsData;

@@ -17,8 +17,13 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         elevation: 4,
         backgroundColor: "#FFFFFF"
-
     },
+    listCard: {
+        display: 'flex',
+        width: '95%',
+        margin: 20,
+        flexDirection: 'column'
+    }
 });
 
 export default styles;
