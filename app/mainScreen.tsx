@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, Image, View, TouchableHighlight } from "react-native";
 import { Avatar, Button, Card} from 'react-native-paper';
+import BNCard from "../components/BNCard"
 import styles from "../styles/HomeStyles"
 
 export default function MainScreen() {
@@ -13,17 +14,15 @@ export default function MainScreen() {
           <Text style={{ lineHeight: 50 }}></Text>
             <Image
               source={require('../assets/images/BanorteLogo.png')}
-              style={{ width: 400, height: 50 }}
+              style={{ width: 350, height: 50 }}
             />
           </View>
-          <Card style={styles.card}>
-            <Card.Content>
-
-            </Card.Content>
-            <Card.Actions>
-
-            </Card.Actions>
-          </Card>
+          <BNCard
+            title={'Titulo'}
+            cardImage={'../assets/images/BanorteLogo.png'}
+            description={'Pablo'}
+            benefits={"Saaa"}
+          />
         </View>
       </View>
     </>
