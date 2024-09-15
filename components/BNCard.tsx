@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button, Text } from 'react-native-paper';
 import { StyleSheet, View } from 'react-native';
-import {Image,TouchableHighlight } from "react-native";
+import {Image,TouchableHighlight, TouchableWithoutFeedback} from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { StrictMode } from 'react';
 
@@ -12,10 +12,9 @@ interface BNCardProps {
   benefits: string;
 }
 
-export default function BNCard({ title, cardImage, description, benefits }: BNCardProps) {
-
-  const nav = useNavigation();
+export default function BNCard({indice, setIndice}) {
   return (
+       <TouchableWithoutFeedback onPress={() => setIndice(indice + 1)}>
     <View style={{justifyContent:'center', height:'85%',width:'100%', backgroundColor: "#FFFFFF", borderRadius: 15}}>
         <View style={{width: '90%'}}>
         <Image source={require('../assets/images/banorteTarjetasCredito/Banorte40.png')} style={{ width: '110%'}}/>
@@ -37,11 +36,10 @@ export default function BNCard({ title, cardImage, description, benefits }: BNCa
                 icon="check-circle-outline"
                 labelStyle={{ fontSize: 90, color: "#FF0000", }}
                 style={{ backgroundColor: "#FFFFFF" , width: 100}}
-                onPress={() => nav.navigate("MatchCards")}
             ></Button>
-
         </View>
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 
